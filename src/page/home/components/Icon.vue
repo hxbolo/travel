@@ -106,6 +106,7 @@ export default {
   width: 25%;
   height: 0;
   padding-bottom: 25%;
+  margin-top: .1rem;
 }
 .icon-img {
   position: absolute;
