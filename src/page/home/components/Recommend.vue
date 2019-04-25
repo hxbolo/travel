@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title">热销推荐</div>
     <ul>
-      <li class="item" v-for="i in recommendList" :key="i.id">
+      <li class="item" v-for="i in list" :key="i.id">
         <img class="item-img" :src="i.imgUrl">
         <div class="itme-info">
           <p class="item-title">{{i.title}}</p>
@@ -17,47 +17,10 @@
 <script>
 export default {
   name: "HomeRecommend",
-  data() {
-    return {
-      recommendList: [
-        {
-          id: "0001",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg",
-          title: "哈哈哈哈",
-          desc: "ooooo"
-        },
-        {
-          id: "0002",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg",
-          title: "哈哈哈哈",
-          desc: "噢噢噢噢"
-        },
-        {
-          id: "0003",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg",
-          title: "哈哈哈哈",
-          desc: "噢噢噢噢"
-        },
-        {
-          id: "0004",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg",
-          title: "哈哈哈哈",
-          desc: "噢噢噢噢"
-        },
-        {
-          id: "0005",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1607/7c/7cda8b6782dabd80b4.img.jpg_200x200_2039e660.jpg",
-          title: "哈哈哈哈",
-          desc: "噢噢噢噢"
-        }
-      ]
-    };
+  props:{
+    list:Array
   }
+
 };
 </script>
 
